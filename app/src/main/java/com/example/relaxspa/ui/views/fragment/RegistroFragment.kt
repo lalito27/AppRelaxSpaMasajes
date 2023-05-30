@@ -13,6 +13,7 @@ import androidx.fragment.app.activityViewModels
 import com.example.relaxspa.Application
 import com.example.relaxspa.R
 import com.example.relaxspa.databinding.FragmentRegistroBinding
+import com.example.relaxspa.entity.Usuario
 import com.example.relaxspa.room.UsuarioDao
 import com.example.relaxspa.ui.viewmodel.UsuarioViewModel
 import com.example.relaxspa.ui.viewmodel.ViewModelFactory
@@ -41,7 +42,18 @@ class RegistroFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        fun navegarAFragmentoNuevo() {
+            val fragmentNuevo = RegistroFragment() // aqui hay que cambiarlo por el fragment que le sigue
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.registroFragment, fragmentNuevo) //cambiar aqui tambien
+                .addToBackStack(null) // Agrega la transacción a la pila para permitir retroceder
+                .commit()
+        }
+
+
+        
         binding.BTNREGISTRAR.setOnClickListener {
+
             var sexo:String = ""
             if (binding.RDBF.isChecked)
             {
@@ -51,29 +63,31 @@ class RegistroFragment : Fragment() {
             {
                 sexo = "Masculino"
             }
+            val dni = binding.EDTDNI.text.toString()
+            val nombres = binding.EDTNOMBRES.text.toString()
+            val apellidos = binding.EDTAPELLIDOS.text.toString()
+            val password = binding.txtPassword.text.toString()
+            val direccion= binding.EDTDIRECPRI.text.toString()
+            val celular = binding.EDTCELULAR.text.toString()
 
-            var nomb = binding.EDTNOMBRES.text.toString()
-            var password = binding.txtPassword.text.toString()
-
-            val nuevoUsuario = Producto (0, tcodigo, tnombre, tcantidad)
-            pViewModel.insertar(nuevoProducto)
-
-            var obj = Usuario(  EDTDNI.text.toString().toInt(), //DNI ES UNICO DEBE HABER VALIDACIONES.
-                EDTNOMBRES.text.toString(),
-                EDTAPELLIDOS.text.toString(),
-                sexo,
-                EDTDIRECPRI.text.toString(),
-                EDTCELULAR.text.toString().toInt(),
-                0)
+            if (dni.isNotBlank() && nombres.isNotBlank() && apellidos.isNotBlank() && sexo.isNotBlank() && direccion.isNotBlank()
+                && celular.isNotBlank() && password.isNotBlank() ) {
 
 
-            Toast.makeText(this, "Usuario ${nomb} registrado correctamente", Toast.LENGTH_LONG).show()
+            val grabarUsuario = Usuario(0, dni, nombres, apellidos, sexo, direccion, celular, password, 1)
+            pViewModel.insertar(grabarUsuario)
 
-            var m = Intent(this, ServicatalogoActivity::class.java)
-            startActivity(m)
+            Toast.makeText(view.getContext(),"Usuario ${nombres} registrado correctamente", Toast.LENGTH_LONG).show()
+
+            /*var m = Intent(this, ServicatalogoActivity::class.java)
+            startActivity(m)*/
+            navegarAFragmentoNuevo()
+            }
+            else {
+                Toast.makeText(view.getContext(), "Registro No Guardado!!.. :(", Toast.LENGTH_SHORT).show()
+            }
         }
-
-   binding.BTNCANCELAR.setOnClickListener {
+        binding.BTNCANCELAR.setOnClickListener {
             var alertsalida = AlertDialog.Builder(requireContext())
             alertsalida.setTitle("Confirmar cierre")
             alertsalida.setMessage("¿Desea salir de la aplicación?")
@@ -88,8 +102,8 @@ class RegistroFragment : Fragment() {
             })
             alertsalida.show()
         }
+
+
     }
-
-
 
 }
