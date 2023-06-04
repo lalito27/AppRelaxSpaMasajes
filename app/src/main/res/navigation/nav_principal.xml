@@ -9,5 +9,45 @@
         android:name="com.example.relaxspa.ui.views.fragment.RegistroFragment"
         android:label="@string/titulo"
         android:textAlignment="center"
-        tools:layout="@layout/fragment_registro" />
+        tools:layout="@layout/fragment_registro" >
+        <action
+            android:id="@+id/action_registroFragment_to_servicatalogoFragment"
+            app:destination="@id/servicatalogoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/servicatalogoFragment"
+        android:name="com.example.relaxspa.ui.views.fragment.ServicatalogoFragment"
+        android:label="@string/titulo2"
+        tools:layout="@layout/fragment_servicatalogo">
+        <argument
+            android:name="usuario"
+            app:argType="com.example.relaxspa.entity.Usuario"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_servicatalogoFragment_to_serviciosFragment"
+            app:destination="@id/serviciosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/serviciosFragment"
+        android:name="com.example.relaxspa.ui.views.fragment.ServiciosFragment"
+        android:label="@string/titulo3"
+        tools:layout="@layout/fragment_servicios">
+        <action
+            android:id="@+id/action_serviciosFragment_to_solicitadosFragment"
+            app:destination="@id/solicitadosFragment" />
+        <argument
+            android:name="usuarios"
+            app:argType="com.example.relaxspa.entity.Usuario"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/solicitadosFragment"
+        android:name="com.example.relaxspa.ui.views.fragment.SolicitadosFragment"
+        android:label="@string/titulo4"
+        tools:layout="@layout/fragment_solicitados">
+        <argument
+            android:name="usuarios"
+            app:argType="com.example.relaxspa.entity.Usuario"
+            app:nullable="true" />
+    </fragment>
 </navigation>
