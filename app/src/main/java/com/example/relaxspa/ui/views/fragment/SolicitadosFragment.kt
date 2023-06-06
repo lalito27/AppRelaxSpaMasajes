@@ -44,7 +44,6 @@ class SolicitadosFragment : Fragment() {
             // Crear una instancia del adaptador personalizado y establecerlo en el RecyclerView
             val adapter = UsuarioAdapter(usuario) { usu ->
                 println("HIZO CLICK EN ${usu.nombres}")
-
             }
             binding.rvUsuarios.adapter = adapter
             /// Observar los cambios en el LiveData
