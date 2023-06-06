@@ -1,7 +1,6 @@
 package com.example.relaxspa.ui.views.fragment
 
 import android.content.DialogInterface
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,18 +9,17 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.relaxspa.Application
-import com.example.relaxspa.R
 import com.example.relaxspa.databinding.FragmentRegistroBinding
 import com.example.relaxspa.entity.Usuario
-import com.example.relaxspa.room.UsuarioDao
 import com.example.relaxspa.ui.viewmodel.UsuarioViewModel
 import com.example.relaxspa.ui.viewmodel.ViewModelFactory
-
 
 class RegistroFragment : Fragment() {
 
     private var _binding: FragmentRegistroBinding? = null
+
     private val binding get() = _binding!!
 
     //Importante agregar esto
@@ -42,15 +40,15 @@ class RegistroFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        fun navegarAFragmentoNuevo() {
-            val fragmentNuevo = RegistroFragment() // aqui hay que cambiarlo por el fragment que le sigue
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.registroFragment, fragmentNuevo) //cambiar aqui tambien
-                .addToBackStack(null) // Agrega la transacción a la pila para permitir retroceder
-                .commit()
-        }
-
-
+        /*fun navegarAFragmentoNuevo() {
+            val fragmentNuevo = ServicatalogoFragment() // aqui hay que cambiarlo por el fragment que le sigue
+            if (isAdded) {
+                parentFragmentManager.beginTransaction()
+                    .replace(R.id.servicatalogoFragment, fragmentNuevo) //cambiar aqui tambien
+                    .addToBackStack(null) // Agrega la transacción a la pila para permitir retroceder
+                    .commit()
+            }
+        }*/
         
         binding.BTNREGISTRAR.setOnClickListener {
 
@@ -79,9 +77,8 @@ class RegistroFragment : Fragment() {
 
             Toast.makeText(view.getContext(),"Usuario ${nombres} registrado correctamente", Toast.LENGTH_LONG).show()
 
-            /*var m = Intent(this, ServicatalogoActivity::class.java)
-            startActivity(m)*/
-            navegarAFragmentoNuevo()
+                var action = RegistroFragmentDirections.actionRegistroFragmentToServicatalogoFragment(null)//puede ser nulo
+                findNavController().navigate(action)
             }
             else {
                 Toast.makeText(view.getContext(), "Registro No Guardado!!.. :(", Toast.LENGTH_SHORT).show()
