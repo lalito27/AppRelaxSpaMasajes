@@ -19,7 +19,7 @@ class UsuarioViewModel (private val repository: UsuarioRepository): ViewModel() 
         }
     }
 
-    fun actualizar(dni: String, nombres: String, apellidos: String, sexo: String, direccion: String, celular: String, pass: String, estado: Int) {
+    fun update(dni: String, nombres: String, apellidos: String, sexo: String, direccion: String, celular: String, pass: String, estado: Int) {
         viewModelScope.launch {//coorutinas
             repository.actualizar(dni, nombres, apellidos, sexo, direccion, celular, pass, estado)
         }
