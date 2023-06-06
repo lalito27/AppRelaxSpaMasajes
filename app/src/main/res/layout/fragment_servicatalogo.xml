@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/serviCatoFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.relaxspa.ui.views.fragment.ServicatalogoFragment">
+
+    <Button
+        android:id="@+id/btnCatalogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:backgroundTint="#000000"
+        android:insetLeft="30dp"
+        android:insetRight="30dp"
+        android:onClick="BotonCatalogo"
+        android:rotationX="15"
+        android:text="@string/catalogo"
+        android:textColor="#FFFFFF"
+        android:translationY="350sp" />
+
+    <Button
+        android:id="@+id/btnNuestroServi"
+        android:layout_width="367dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:backgroundTint="#000000"
+        android:insetLeft="30dp"
+        android:insetRight="30dp"
+        android:onClick="BotonServicios"
+        android:rotationX="-15"
+        android:text="@string/servicios"
+        android:textColor="#FFFFFF"
+        android:translationY="240sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="160sp"
+        android:layout_marginRight="160sp"
+        android:backgroundTint="#000000"
+        android:onClick="BotonSalir"
+        android:text="SALIR"
+        android:textColor="#FFFFFF"
+        android:translationY="400sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Atencion"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:translationY="450sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Version"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:translationY="480sp" />
+
+</LinearLayout>
