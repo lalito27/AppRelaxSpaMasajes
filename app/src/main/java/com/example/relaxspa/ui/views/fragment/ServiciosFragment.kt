@@ -51,6 +51,11 @@ class ServiciosFragment : Fragment() {
             findNavController().navigate(action1)
         }
 
+        binding.btnContacto.setOnClickListener {
+            var action1 = ServiciosFragmentDirections.actionServiciosFragmentToContactanosFragment()//puede ser nulo
+            findNavController().navigate(action1)
+        }
+
         //soolo para ver la lista un observador
         pViewModel.usuarios.observe(viewLifecycleOwner) {lista ->
             println("INFORMACION DE LA LISTA ${lista.size}")

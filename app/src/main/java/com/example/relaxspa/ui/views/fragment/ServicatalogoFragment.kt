@@ -35,7 +35,8 @@ class ServicatalogoFragment : Fragment() {
 
         binding.btnCatalogo.setOnClickListener{
 
-            var action = ServicatalogoFragmentDirections.
+            var action = ServicatalogoFragmentDirections.actionServicatalogoFragmentToCatalogoFragment()
+            findNavController().navigate(action)
 
         }
 

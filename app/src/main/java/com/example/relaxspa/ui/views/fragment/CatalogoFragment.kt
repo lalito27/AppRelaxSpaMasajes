@@ -33,7 +33,7 @@ class CatalogoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.BotonAtras.setOnClickListener {
-            var action = CatalogoFragmentDirections.actionCatalogoFragmentToServicatalogoFragment2(null)
+            var action = CatalogoFragmentDirections.actionCatalogoFragmentToServicatalogoFragment3(null)
             findNavController().navigate(action)
         }
 

@@ -94,7 +94,7 @@
         app:srcCompat="@drawable/mapa_ubicacion" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btn_Atras"
         android:layout_width="128dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="150sp"
@@ -102,7 +102,7 @@
         android:backgroundTint="#434B4D"
         android:onClick="BotonRegresar"
         android:rotationX="2"
-        android:text="REGRESAR"
+        android:text="ATRAS"
         android:textColor="#FFDF00"
         android:translationY="110sp" />
 </LinearLayout>

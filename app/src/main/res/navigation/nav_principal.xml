@@ -26,6 +26,9 @@
         <action
             android:id="@+id/action_servicatalogoFragment_to_catalogoFragment"
             app:destination="@id/catalogoFragment" />
+        <action
+            android:id="@+id/action_servicatalogoFragment_to_serviciosFragment"
+            app:destination="@id/serviciosFragment" />
     </fragment>
     <fragment
         android:id="@+id/serviciosFragment"
@@ -57,7 +60,11 @@
         android:id="@+id/contactanosFragment"
         android:name="com.example.relaxspa.ui.views.fragment.ContactanosFragment"
         android:label="fragment_contactanos"
-        tools:layout="@layout/fragment_contactanos" />
+        tools:layout="@layout/fragment_contactanos" >
+        <action
+            android:id="@+id/action_contactanosFragment_to_serviciosFragment"
+            app:destination="@id/serviciosFragment" />
+    </fragment>
     <fragment
         android:id="@+id/catalogoFragment"
         android:name="com.example.relaxspa.ui.views.fragment.CatalogoFragment"
