@@ -11,18 +11,18 @@ import com.example.relaxspa.Application
 import com.example.relaxspa.R
 import com.example.relaxspa.databinding.FragmentRegistroBinding
 import com.example.relaxspa.databinding.FragmentServiciosBinding
-import com.example.relaxspa.ui.viewmodel.UsuarioViewModel
+import com.example.relaxspa.ui.viewmodel.ReservaViewModel
 import com.example.relaxspa.ui.viewmodel.ViewModelFactory
 
 
-class ServiciosFragment : Fragment() {
+class ReservaFragment : Fragment() {
 
     private var _binding: FragmentServiciosBinding? = null
 
     private val binding get() = _binding!!
 
     //Importante agregar esto
-    private val pViewModel: UsuarioViewModel by activityViewModels {
+    private val pViewModel: ReservaViewModel by activityViewModels {
         val repository = (requireActivity().application as Application).repository
         ViewModelFactory(repository)
     }
@@ -40,7 +40,7 @@ class ServiciosFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        
+
         binding.btnServiSoli.setOnClickListener {
    //         var action1 = ServiciosFragmentDirections.actionServiciosFragmentToSolicitadosFragment(null)//puede ser nulo
     //        findNavController().navigate(action1)
@@ -52,7 +52,7 @@ class ServiciosFragment : Fragment() {
         }
 
         //soolo para ver la lista un observador
-        pViewModel.usuarios.observe(viewLifecycleOwner) {lista ->
+        pViewModel.reservas.observe(viewLifecycleOwner) {lista ->
             println("INFORMACION DE LA LISTA ${lista.size}")
             for (p in lista) {
                 println(p.toString())
