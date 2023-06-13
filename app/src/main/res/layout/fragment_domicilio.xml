@@ -37,40 +37,40 @@
         android:translationY="85sp">
 
         <RadioGroup
-            android:id="@+id/RDGCORTESD"
+            android:id="@+id/btnMasajes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/RDBNORMALD"
+                android:id="@+id/MASAJEPAREJA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="200sp"
-                android:text="Normal"
+                android:text="En Pareja"
                 android:textSize="16sp" />
 
             <RadioButton
-                android:id="@+id/RDBESCOLARD"
+                android:id="@+id/MASAJETERA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="200sp"
-                android:text="Escolar"
+                android:text="Terapeutico"
                 android:textSize="16sp" />
 
             <RadioButton
-                android:id="@+id/RDBMILITARD"
+                android:id="@+id/MASAJEDESCON"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="200sp"
-                android:text="Militar"
+                android:text="Desconstracturante"
                 android:textSize="16sp" />
 
             <RadioButton
-                android:id="@+id/RDBMODERNOD"
+                android:id="@+id/MASAJERELA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="200sp"
-                android:text="Moderno"
+                android:text="Masaje Relajante"
                 android:textSize="16sp" />
         </RadioGroup>
     </LinearLayout>
@@ -110,8 +110,8 @@
         android:id="@+id/BTNCONFIRMAR"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="150sp"
-        android:layout_marginRight="150sp"
+        android:layout_marginLeft="135sp"
+        android:layout_marginRight="135sp"
         android:backgroundTint="#020202"
         android:onClick="BotonConfirmar"
         android:rotationX="-10"
@@ -123,8 +123,8 @@
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="150sp"
-        android:layout_marginRight="150sp"
+        android:layout_marginLeft="135sp"
+        android:layout_marginRight="135sp"
         android:backgroundTint="#000000"
         android:onClick="BotonRegresar"
         android:rotationX="10"
