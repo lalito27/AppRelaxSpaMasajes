@@ -42,14 +42,20 @@ class ServiciosFragment : Fragment() {
 
         
         binding.btnServiSoli.setOnClickListener {
-            var action1 = ServiciosFragmentDirections.actionServiciosFragmentToSolicitadosFragment(null)//puede ser nulo
-            findNavController().navigate(action1)
+            var action = ServiciosFragmentDirections.actionServiciosFragmentToSolicitadosFragment(null)//puede ser nulo
+            findNavController().navigate(action)
         }
 
         binding.btnUsuarios.setOnClickListener {
             var action1 = ServiciosFragmentDirections.actionServiciosFragmentToSolicitadosFragment(null)//puede ser nulo
             findNavController().navigate(action1)
         }
+
+        binding.btnContacto.setOnClickListener {
+            var action2 = ServiciosFragmentDirections.actionServiciosFragmentToContactanosFragment()//puede ser nulo
+            findNavController().navigate(action2)
+        }
+
 
         //soolo para ver la lista un observador
         pViewModel.usuarios.observe(viewLifecycleOwner) {lista ->

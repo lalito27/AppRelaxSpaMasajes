@@ -74,18 +74,19 @@
 
     <Button
         android:id="@+id/btnUsuarios"
-        android:layout_width="189dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="104dp"
+        android:layout_width="191dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="108dp"
         android:backgroundTint="#FFFFFF"
         android:onClick="BotonUsuarios"
         android:text="USUARIOS REGISTRADOS"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/btnServiSoli"
         app:layout_constraintTop_toTopOf="@+id/btnServiSoli"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="201dp" />
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btnContacto"
