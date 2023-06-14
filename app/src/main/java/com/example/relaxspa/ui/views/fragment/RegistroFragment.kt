@@ -77,8 +77,8 @@ class RegistroFragment : Fragment() {
 
             Toast.makeText(view.getContext(),"Usuario ${nombres} registrado correctamente", Toast.LENGTH_LONG).show()
 
-                var action = RegistroFragmentDirections.actionRegistroFragmentToServicatalogoFragment(null)//puede ser nulo
-                findNavController().navigate(action)
+    //            var action = RegistroFragmentDirections.actionRegistroFragmentToServicatalogoFragment(null)//puede ser nulo
+    //            findNavController().navigate(action)
             }
             else {
                 Toast.makeText(view.getContext(), "Registro No Guardado!!.. :(", Toast.LENGTH_SHORT).show()

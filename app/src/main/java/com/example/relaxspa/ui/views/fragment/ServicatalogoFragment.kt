@@ -35,8 +35,8 @@ class ServicatalogoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnNuestroServi.setOnClickListener {
-            var action = ServicatalogoFragmentDirections.actionServicatalogoFragmentToServiciosFragment(null)//puede ser nulo
-            findNavController().navigate(action)
+    //        var action = ServicatalogoFragmentDirections.actionServicatalogoFragmentToServiciosFragment(null)//puede ser nulo
+    //        findNavController().navigate(action)
         }
 
         binding.btnCatalogo.setOnClickListener{

@@ -1,0 +1,135 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.views.fragment.DomicilioFragment">
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DOMICILIO"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:translationY="50sp" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:text="Servicio de Masajes:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:translationY="80sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:orientation="vertical"
+        android:translationY="85sp">
+
+        <RadioGroup
+            android:id="@+id/btnMasajes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/MASAJEPAREJA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="200sp"
+                android:text="En Pareja"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/MASAJETERA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="200sp"
+                android:text="Terapeutico"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/MASAJEDESCON"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="200sp"
+                android:text="Desconstracturante"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/MASAJERELA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="200sp"
+                android:text="Masaje Relajante"
+                android:textSize="16sp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/EDTHORA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="300sp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:translationY="150sp" />
+
+    <Button
+        android:id="@+id/BTNHORA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="160sp"
+        android:layout_marginRight="160sp"
+        android:backgroundTint="#000000"
+        android:text="Hora"
+        android:textColor="#FFFFFF"
+        android:translationY="105sp" />
+
+    <TextView
+        android:id="@+id/TVFECHA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="270sp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:translationY="20sp" />
+
+    <Button
+        android:id="@+id/BTNCONFIRMAR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="135sp"
+        android:layout_marginRight="135sp"
+        android:backgroundTint="#020202"
+        android:onClick="BotonConfirmar"
+        android:rotationX="-10"
+        android:text="CONFIRMAR"
+        android:textColor="#FFFFFF"
+        android:translationY="130sp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="135sp"
+        android:layout_marginRight="135sp"
+        android:backgroundTint="#000000"
+        android:onClick="BotonRegresar"
+        android:rotationX="10"
+        android:text="REGRESAR"
+        android:textColor="#FFFFFF"
+        android:translationY="145sp" />
+
+</LinearLayout>
