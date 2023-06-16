@@ -72,6 +72,13 @@ dependencies {
     implementation "androidx.room:room-ktx:$room"
     kapt "androidx.room:room-compiler:$room"
 
+    //Retrofit 2 (lectura de servicios y consumo api rest)
+    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+    implementation 'com.squareup.moshi:moshi-kotlin:1.9.3'
+
+    //Glide (obtener recursos graficos como imagenes a partir de urls)
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+
     // Kotlin components
     api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines"
     api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines"
