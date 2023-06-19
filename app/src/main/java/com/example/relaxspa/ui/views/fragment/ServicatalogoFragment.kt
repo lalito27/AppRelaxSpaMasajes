@@ -1,15 +1,14 @@
 package com.example.relaxspa.ui.views.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.navigation.fragment.findNavController
-import com.example.relaxspa.R
-import com.example.relaxspa.databinding.FragmentRegistroBinding
-import com.example.relaxspa.databinding.FragmentServicatalogoBinding
 import com.example.relaxspa.databinding.FragmentCatalogoBinding
+import com.example.relaxspa.databinding.FragmentServicatalogoBinding
 
 class ServicatalogoFragment : Fragment() {
 
@@ -36,14 +35,22 @@ class ServicatalogoFragment : Fragment() {
 
         binding.btnNuestroServi.setOnClickListener {
             var action = ServicatalogoFragmentDirections.actionServicatalogoFragmentToServiciosFragment(null)//puede ser nulo
-            findNavController().navigate(action)
+           findNavController().navigate(action)
         }
 
         binding.btnCatalogo.setOnClickListener{
              var action1= ServicatalogoFragmentDirections.actionServicatalogoFragmentToCatalogoFragment()
               findNavController().navigate(action1)
-
         }
+
+        binding.btnNuestrosCocteles.setOnClickListener {
+             var action2= ServicatalogoFragmentDirections.actionServicatalogoFragmentToCoctelFragment()
+             findNavController().navigate(action2)
+        }
+        binding.btnSalir.setOnClickListener {
+            requireActivity().finish()
+        }
+
 
     }
 }

@@ -20,10 +20,10 @@ class UsuarioAdapter(var lista : List<Usuario>, val onclick: (Usuario) -> Unit) 
     }
 
     override fun onBindViewHolder(holder: UsuarioViewHolder, position: Int) {
-        val product = lista[position]
-        holder.bind(product)
+        val user= lista[position]
+        holder.bind(user)
         holder.itemView.setOnClickListener {
-            onclick(product)
+            onclick(user)
         }
     }
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

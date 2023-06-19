@@ -29,6 +29,9 @@
         <action
             android:id="@+id/action_servicatalogoFragment_to_serviciosFragment"
             app:destination="@id/serviciosFragment" />
+        <action
+            android:id="@+id/action_servicatalogoFragment_to_coctelFragment"
+            app:destination="@id/coctelFragment" />
     </fragment>
     <fragment
         android:id="@+id/serviciosFragment"
@@ -45,6 +48,15 @@
         <action
             android:id="@+id/action_serviciosFragment_to_contactanosFragment"
             app:destination="@id/contactanosFragment" />
+        <action
+            android:id="@+id/action_serviciosFragment_to_domicilioFragment"
+            app:destination="@id/domicilioFragment" />
+        <action
+            android:id="@+id/action_serviciosFragment_to_reservaFragment"
+            app:destination="@id/reservaFragment" />
+        <action
+            android:id="@+id/action_serviciosFragment_to_servicatalogoFragment"
+            app:destination="@id/servicatalogoFragment" />
     </fragment>
     <fragment
         android:id="@+id/solicitadosFragment"
@@ -59,8 +71,8 @@
     <fragment
         android:id="@+id/contactanosFragment"
         android:name="com.example.relaxspa.ui.views.fragment.ContactanosFragment"
-        android:label="fragment_contactanos"
-        tools:layout="@layout/fragment_contactanos" >
+        android:label="@string/titulo5"
+        tools:layout="@layout/fragment_contactanos">
         <action
             android:id="@+id/action_contactanosFragment_to_serviciosFragment"
             app:destination="@id/serviciosFragment" />
@@ -68,10 +80,33 @@
     <fragment
         android:id="@+id/catalogoFragment"
         android:name="com.example.relaxspa.ui.views.fragment.CatalogoFragment"
-        android:label="fragment_catalogo"
-        tools:layout="@layout/fragment_catalogo" >
+        android:label="@string/titulo6"
+        tools:layout="@layout/fragment_catalogo">
         <action
             android:id="@+id/action_catalogoFragment_to_servicatalogoFragment"
             app:destination="@id/servicatalogoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coctelFragment"
+        android:name="com.example.relaxspa.ui.views.fragment.CoctelFragment"
+        android:label="@string/titulo7"
+        tools:layout="@layout/fragment_coctel" />
+    <fragment
+        android:id="@+id/domicilioFragment"
+        android:name="com.example.relaxspa.ui.views.fragment.DomicilioFragment"
+        android:label="@string/titulo8"
+        tools:layout="@layout/fragment_domicilio">
+        <action
+            android:id="@+id/action_domicilioFragment_to_serviciosFragment"
+            app:destination="@id/serviciosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reservaFragment"
+        android:name="com.example.relaxspa.ui.views.fragment.ReservaFragment"
+        android:label="@string/titulo9"
+        tools:layout="@layout/fragment_reserva">
+        <action
+            android:id="@+id/action_reservaFragment_to_serviciosFragment"
+            app:destination="@id/serviciosFragment" />
     </fragment>
 </navigation>

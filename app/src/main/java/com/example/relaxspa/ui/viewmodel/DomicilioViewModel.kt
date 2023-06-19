@@ -18,9 +18,9 @@ class DomicilioViewModel(private val repository: DomicilioRepository) : ViewMode
         }
     }
 
-    fun update(calle: String, numero: String, ciudad: String, id: Int) {
+    fun update(servicio_masaje: String, direccion: String, ciudad: String, fecha: String, hora: String, id: Int) {
         viewModelScope.launch {
-            repository.update(calle, numero, ciudad, id)
+            repository.update(servicio_masaje, direccion, ciudad, fecha, hora, id)
         }
     }
 

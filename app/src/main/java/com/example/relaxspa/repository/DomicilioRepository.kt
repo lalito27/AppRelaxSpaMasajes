@@ -10,8 +10,8 @@ class DomicilioRepository(private val domicilioDao: DomicilioDao) {
     suspend fun insert(domicilio: Domicilio) {
         domicilioDao.insert(domicilio)
     }
-    suspend fun update(direccion: String, ciudad: String, estado: String, id: Int) {
-        domicilioDao.update(direccion, ciudad, estado, id)
+    suspend fun update(servicio_masaje: String, direccion: String, ciudad: String, fecha: String, hora: String, id: Int) {
+        domicilioDao.update(servicio_masaje, direccion, ciudad, fecha,  hora, id)
     }
     suspend fun delete(id: Int) {
         domicilioDao.delete(id)

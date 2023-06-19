@@ -29,7 +29,7 @@
         android:id="@+id/btnNuestroServi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="40dp"
         android:backgroundTint="#000000"
         android:insetLeft="30dp"
         android:insetRight="30dp"
@@ -44,16 +44,14 @@
         android:id="@+id/btnSalir"
         android:layout_width="130dp"
         android:layout_height="49dp"
-        android:layout_marginLeft="160sp"
-        android:layout_marginTop="70dp"
-        android:layout_marginRight="160sp"
+        android:layout_marginTop="40dp"
         android:backgroundTint="#000000"
         android:onClick="BotonSalir"
-        android:text="SALIR"
+        android:text="@string/Salir"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnNuestroServi" />
+        app:layout_constraintTop_toBottomOf="@+id/btnNuestrosCocteles" />
 
     <TextView
         android:id="@+id/lblatencion"
@@ -78,6 +76,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblatencion" />
+
+    <Button
+        android:id="@+id/btnNuestrosCocteles"
+        android:layout_width="236dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:insetLeft="30dp"
+        android:insetRight="30dp"
+        android:text="@string/cocteles"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNuestroServi" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

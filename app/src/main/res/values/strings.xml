@@ -4,8 +4,14 @@
     <string name="titulo2">Catálogo</string>
     <string name="titulo3">Servicios</string>
     <string name="titulo4">Clientes Registrados</string>
+    <string name="titulo5">Contactos y Redes Sociales</string>
+    <string name="titulo6">Catálogo de Masajes</string>
+    <string name="titulo7">Cocteles</string>
+    <string name="titulo8">Escoja por Domicilio</string>
+    <string name="titulo9">Reserve</string>
     <string name="nuestros_servicios">Nuestros Servicios:</string>
     <string name="servicios">Nuestros Servicios</string>
+    <string name="cocteles">Nuestros Cocteles</string>
     <string name="Reserva">TODO</string>
     <string name="Atencion">IMPORTANTE: La cobertura es solo para Lima Metropolitana.</string>
     <string name="Version">RelaxSpa/Beta 1.0</string>
@@ -16,4 +22,14 @@
     <string name="todo">TODO</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cmb_ciudad">Selecciona un elemento</string>
+    <string-array name="cmbitem_ciudad">
+        <item>Lima</item>
+        <item>Lince</item>
+        <item>Pueblo Libre</item>
+        <item>San Borja</item>
+        <item>Jesus Maria</item>
+        <item>San Juan de Lurigancho</item>
+        <item>Santiago de Surco</item>
+    </string-array>
 </resources>

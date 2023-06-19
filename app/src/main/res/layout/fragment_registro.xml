@@ -113,6 +113,7 @@
             android:ems="10"
             android:hint="Ingrese su DNI..."
             android:inputType="number"
+            android:maxLength="8"
             android:textSize="15sp"
             tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
@@ -245,6 +246,7 @@
             android:ems="10"
             android:hint="Ingrese su número de celular..."
             android:inputType="phone"
+            android:maxLength="9"
             android:textSize="15sp" />
     </LinearLayout>
 

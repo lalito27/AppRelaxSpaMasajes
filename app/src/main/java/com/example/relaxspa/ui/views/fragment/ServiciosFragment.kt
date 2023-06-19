@@ -40,7 +40,6 @@ class ServiciosFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        
         binding.btnServiSoli.setOnClickListener {
             var action = ServiciosFragmentDirections.actionServiciosFragmentToSolicitadosFragment(null)//puede ser nulo
             findNavController().navigate(action)
@@ -56,14 +55,21 @@ class ServiciosFragment : Fragment() {
             findNavController().navigate(action2)
         }
 
-
-        //soolo para ver la lista un observador
-        pViewModel.usuarios.observe(viewLifecycleOwner) {lista ->
-            println("INFORMACION DE LA LISTA ${lista.size}")
-            for (p in lista) {
-                println(p.toString())
-            }
+        binding.btnDomicilio.setOnClickListener {
+            var action3 = ServiciosFragmentDirections.actionServiciosFragmentToDomicilioFragment()
+            findNavController().navigate(action3)
         }
+
+        binding.btnReserva.setOnClickListener {
+            var action4 = ServiciosFragmentDirections.actionServiciosFragmentToReservaFragment()
+            findNavController().navigate(action4)
+        }
+
+        binding.btnSalir.setOnClickListener {
+            var action5 = ServiciosFragmentDirections.actionServiciosFragmentToServicatalogoFragment(null)
+            findNavController().navigate(action5)
+        }
+
     }
 
 

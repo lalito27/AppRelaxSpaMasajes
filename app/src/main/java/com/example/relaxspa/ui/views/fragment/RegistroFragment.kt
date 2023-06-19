@@ -75,13 +75,12 @@ class RegistroFragment : Fragment() {
             val grabarUsuario = Usuario(0, dni, nombres, apellidos, sexo, direccion, celular, password, 1)
             pViewModel.insertar(grabarUsuario)
 
-            Toast.makeText(view.getContext(),"Usuario ${nombres} registrado correctamente", Toast.LENGTH_LONG).show()
-
+            Toast.makeText(view.context,"Usuario ${nombres} registrado correctamente", Toast.LENGTH_LONG).show()
                 var action = RegistroFragmentDirections.actionRegistroFragmentToServicatalogoFragment(null)//puede ser nulo
                 findNavController().navigate(action)
             }
             else {
-                Toast.makeText(view.getContext(), "Registro No Guardado!!.. :(", Toast.LENGTH_SHORT).show()
+                Toast.makeText(view.context, "Registro No Guardado!!.. :(", Toast.LENGTH_SHORT).show()
             }
         }
         binding.BTNCANCELAR.setOnClickListener {

@@ -1,4 +1,3 @@
 package com.example.relaxspa.entity
 
-class Error (val codigo: String, val mensaje: String){
-}
+class Error (val codigo: String, val mensaje: String)

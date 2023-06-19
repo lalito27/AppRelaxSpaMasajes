@@ -4,10 +4,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.relaxspa.databinding.ItemCoctelBinding
-import com.example.relaxspa.entity.CoctelResult
+import com.example.relaxspa.entity.Coctel
 
 
-class CoctelAdapter(val lista: List<CoctelResult>) : Adapter<CoctelViewHolder>()
+class CoctelAdapter(val lista: List<Coctel>) : Adapter<CoctelViewHolder>()
 {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoctelViewHolder {
        val binding = ItemCoctelBinding.inflate(LayoutInflater.from(parent.context),parent, false)

@@ -3,10 +3,10 @@ package com.example.relaxspa.ui.views.adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
 import com.example.relaxspa.databinding.ItemCoctelBinding
-import com.example.relaxspa.entity.CoctelResult
+import com.example.relaxspa.entity.Coctel
 
 class CoctelViewHolder (private val binding: ItemCoctelBinding) : ViewHolder(binding.root){
-    fun bind(coctel: CoctelResult) {
+    fun bind(coctel: Coctel) {
         binding.lblTrago.text = coctel.strDrink
         /*val lista = pokemon.url.split("/")
         val idPokemon = lista[lista.size - 2]
