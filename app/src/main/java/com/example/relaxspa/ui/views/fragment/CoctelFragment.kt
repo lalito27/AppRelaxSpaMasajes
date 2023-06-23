@@ -48,7 +48,7 @@ class CoctelFragment : Fragment() {
                     }*/
                     val adapter = CoctelAdapter(lista)
                     binding.rvCoctel.adapter = adapter
-                    binding.rvCoctel.layoutManager = GridLayoutManager(requireContext(), 3) /*LinearLayoutManager*/
+                    binding.rvCoctel.layoutManager = GridLayoutManager(requireContext(), 2) /*LinearLayoutManager*/
                     val divider = MaterialDividerItemDecoration(requireContext(), LinearLayoutManager.VERTICAL /*or LinearLayoutManager.HORIZONTAL*/)
 
                     val metric = resources.displayMetrics

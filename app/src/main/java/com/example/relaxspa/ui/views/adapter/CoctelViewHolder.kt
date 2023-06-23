@@ -8,6 +8,12 @@ import com.example.relaxspa.entity.Coctel
 class CoctelViewHolder (private val binding: ItemCoctelBinding) : ViewHolder(binding.root){
     fun bind(coctel: Coctel) {
         binding.lblTrago.text = coctel.strDrink
+        //Con esto cargamos la imagen correspondiente
+        Glide.with(itemView.context)
+            .load(coctel.strDrinkThumb)
+            .centerCrop()
+            .into(binding.imgCoctel)
+
         /*val lista = pokemon.url.split("/")
         val idPokemon = lista[lista.size - 2]
         val urlPhoto = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/$idPokemon.png"
